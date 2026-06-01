@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<historial>
+    <combate id="1" jugador_id="SMASH-01">
+        <rival>Fox</rival>
+        <personaje_id>65</personaje_id>
+        <resultado>Victoria</resultado>
+        <stocks>2</stocks>
+        <escenario>Final Destination</escenario>
+    </combate>
+    <combate id="2" jugador_id="SMASH-01">
+        <rival>Sonic</rival>
+        <personaje_id>65</personaje_id>
+        <resultado>Derrota</resultado>
+        <stocks>0</stocks>
+        <escenario>Smashville</escenario>
+    </combate>
+    <combate id="3" jugador_id="SMASH-01">
+        <rival>Kazuya</rival>
+        <personaje_id>74</personaje_id>
+        <resultado>Victoria</resultado>
+        <stocks>1</stocks>
+        <escenario>Battlefield</escenario>
+    </combate>
+    <combate id="4" jugador_id="SMASH-02">
+        <rival>Joker</rival>
+        <personaje_id>74</personaje_id>
+        <resultado>Victoria</resultado>
+        <stocks>3</stocks>
+        <escenario>Smashville</escenario>
+    </combate>
+</historial>

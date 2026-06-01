@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métricas Globales</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">SMASH DASHBOARD</div>
+        <ul class="nav-links">
+            <li><a href="../../index.html">Inicio</a></li>
+            <li><a href="../jugador/perfil.html">Perfil</a></li>
+            <li><a href="../jugador/historial.html">Historial</a></li>
+            <li><a href="../roster/roster.html">Roster</a></li>
+            <li><a href="torneos.html">Torneos</a></li>
+            <li><a href="estadisticas.html" class="active">Estadísticas</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenedor">
+        <h1>Métricas y Analíticas Globales</h1>
+        <p>Análisis en tiempo real del rendimiento de los jugadores registrados.</p>
+
+        <section class="grid-estadisticas">
+            <div class="card-metrica">
+                <h3>Efectividad Total (Win Rate)</h3>
+                <h2 id="global-winrate">0%</h2>
+                <div class="barra-progreso-bg" style="background: #333; border-radius: 4px; height: 15px; width: 100%; overflow: hidden;">
+                    <div id="barra-winrate" style="background: #2ecc71; height: 100%; width: 0%; transition: width 0.5s;"></div>
+                </div>
+            </div>
+
+            <div class="card-metrica" style="display: flex; align-items: center; gap: 20px; background: #222; padding: 20px; border-radius: 8px;">
+                <div class="meta-img">
+                    <img id="img-mas-usado" src="" alt="Fighter más usado" style="max-width: 80px; height: auto; display: none;">
+                </div>
+                <div class="meta-info">
+                    <h3>Luchador Más Utilizado</h3>
+                    <h4 id="nombre-mas-usado" style="color: #ff0043; margin: 5px 0;">Calculando...</h4>
+                    <p>Total de apariciones: <span id="usos-mas-usado">0</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../js/vistas/estadisticas.js"></script>
+</body>
+</html>

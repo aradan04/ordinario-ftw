@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smash Ultimate Dashboard - Home</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">SMASH DASHBOARD</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="vistas/jugador/perfil.html">Perfil</a></li>
+            <li><a href="vistas/jugador/historial.html">Historial</a></li>
+            <li><a href="vistas/roster/roster.html">Roster</a></li>
+            <li><a href="vistas/torneos/torneos.html">Torneos</a></li>
+            <li><a href="vistas/torneos/estadisticas.html">Estadísticas</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenedor">
+        <header class="bienvenida">
+            <h1>Bienvenido al Smash Dashboard</h1>
+            <p>Análisis estadístico, gestión de perfiles y consulta de luchadores de Super Smash Bros. Ultimate.</p>
+        </header>
+
+        <section class="grid-resumen">
+            <div class="tarjeta-resumen">
+                <h3>Estado de la Base de Datos</h3>
+                <p>Combates Registrados: <span id="num-combates">Cargando...</span></p>
+                <p>Luchadores en Roster: <span id="num-personajes">Cargando...</span></p>
+            </div>
+            
+            <div class="tarjeta-resumen destacado">
+                <h3>Jugador Destacado</h3>
+                <h4 id="tag-destacado">Cargando...</h4>
+                <p>Rango: <span id="rango-destacado">-</span></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/vistas/estadisticas.js"></script>
+</body>
+</html>

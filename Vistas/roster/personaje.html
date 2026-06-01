@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Personaje</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">SMASH DASHBOARD</div>
+        <ul class="nav-links">
+            <li><a href="../../index.html">Inicio</a></li>
+            <li><a href="../jugador/perfil.html">Perfil</a></li>
+            <li><a href="../jugador/historial.html">Historial</a></li>
+            <li><a href="roster.html">Roster</a></li>
+            <li><a href="../torneos/torneos.html">Torneos</a></li>
+            <li><a href="../torneos/estadisticas.html">Estadísticas</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenedor">
+        <a href="roster.html" class="btn-regresar">← Volver al Roster</a>
+
+        <section class="detalle-box" style="display: flex; gap: 40px; align-items: center; background: #222; padding: 30px; border-radius: 8px; margin-top: 20px;">
+            
+            <div class="char-render">
+                <img id="char-imagen" src="" alt="Fighter Render Oficial" style="max-width: 300px; height: auto; display: block; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));">
+            </div>
+
+            <div class="detalle-info" style="flex: 1;">
+                <header class="detalle-header" style="display: flex; justify-content: space-between; align-items: center;">
+                    <h1 id="char-nombre" style="margin: 0; color: #ff0043;">Cargando...</h1>
+                    <span id="char-tier" class="badge-tier" style="background: #ff0043; padding: 5px 15px; border-radius: 4px; font-weight: bold;">-</span>
+                </header>
+                
+                <br>
+                <p><strong>Franquicia de Origen:</strong> <span id="char-franquicia">-</span></p>
+                <p><strong>Estilo Arquetipo:</strong> <span id="char-estilo">-</span></p>
+                
+                <hr style="border-color: #444; margin: 20px 0;">
+                
+                <h3>Atributos Físicos (Evaluados por JS)</h3>
+                <p><strong>Valor de Peso:</strong> <span id="char-peso-valor">-</span></p>
+                <p><strong>Clasificación de Peso:</strong> <span id="char-peso-clase">-</span></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../js/vistas/roster.js"></script>
+</body>
+</html>

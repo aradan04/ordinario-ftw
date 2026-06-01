@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comunidad>
+    <jugador id="SMASH-01">
+        <tag>MkLeo</tag>
+        <region>México</region>
+        <rango>Elite Smash</rango>
+        <clan>T1</clan>
+        <main_id>65</main_id>
+        <secundario_id>74</secundario_id>
+        <foto_url>https://api.dicebear.com/7.x/bottts/svg?seed=MkLeo</foto_url>
+    </jugador>
+    <jugador id="SMASH-02">
+        <tag>Sparg0</tag>
+        <region>Baja California</region>
+        <rango>Elite Smash</rango>
+        <clan>FaZe</clan>
+        <main_id>74</main_id>
+        <secundario_id>01</secundario_id>
+        <foto_url>https://api.dicebear.com/7.x/bottts/svg?seed=Sparg0</foto_url>
+    </jugador>
+</comunidad>

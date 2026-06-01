@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calendario>
+    <torneo id="T-2026-01">
+        <nombre>Smash Factor XI</nombre>
+        <sede>Puebla, México</sede>
+        <fecha>2026-07-15</fecha>
+        <participantes>512</participantes>
+        <estado_manual>Programado</estado_manual>
+        <logo_url>https://api.dicebear.com/7.x/initials/svg?seed=SF&amp;backgroundColor=ff0043</logo_url>
+    </torneo>
+    <torneo id="T-2026-02">
+        <nombre>Genesis X</nombre>
+        <sede>California, USA</sede>
+        <fecha>2026-02-18</fecha>
+        <participantes>1024</participantes>
+        <estado_manual>Finalizado</estado_manual>
+        <logo_url>https://api.dicebear.com/7.x/initials/svg?seed=GX&amp;backgroundColor=0055ff</logo_url>
+    </torneo>
+</calendario>
