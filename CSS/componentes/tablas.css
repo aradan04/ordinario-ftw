@@ -1,0 +1,118 @@
+/* ==========================================================================
+   DISEÑO DE COMPONENTES DE TABLAS (Estadísticas e Historial)
+   ========================================================================== */
+
+/* 1. Contenedor del Historial */
+.resumen-card {
+    background-color: var(--bg-secundario);
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    border-left: 4px solid var(--color-smash);
+}
+
+.resumen-card h3 {
+    margin-bottom: 10px;
+    color: var(--texto-blanco);
+    font-size: 1.1rem;
+}
+
+.resumen-card p {
+    color: var(--texto-gris);
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.resumen-card span {
+    font-weight: bold;
+    color: var(--texto-blanco);
+}
+
+/* 2. Estructura de la Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-secundario);
+    border-radius: 8px;
+    overflow: hidden; /* Mantiene los bordes redondeados en las esquinas */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    margin-top: 20px;
+}
+
+/* 3. Encabezados (Th) */
+th {
+    background-color: #0b0b0b;
+    color: var(--color-smash);
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 16px 18px;
+    border-bottom: 2px solid var(--color-smash);
+}
+
+/* 4. Celdas de Datos (Td) */
+td {
+    padding: 14px 18px;
+    color: var(--texto-blanco);
+    border-bottom: 1px solid #222;
+    font-size: 0.95rem;
+    vertical-align: middle;
+}
+
+/* Efecto Hover para resaltar la fila donde pasa el mouse */
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+/* 5. Clases Dinámicas (Inyectadas por las operaciones lógicas de JS) */
+
+/* Configuración para Fila Ganada */
+tr.ganado {
+    background-color: rgba(46, 204, 113, 0.03);
+}
+
+/* Resalta la celda del resultado "Victoria" en verde */
+tr.ganado td:nth-child(5) {
+    color: var(--color-victoria);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+/* Configuración para Fila Perdida */
+tr.perdido {
+    background-color: rgba(231, 76, 60, 0.01);
+}
+
+/* Resalta la celda del resultado "Derrota" en rojo */
+tr.perdido td:nth-child(5) {
+    color: var(--color-derrota);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+/* 6. Elementos multimedia dentro de las celdas */
+.mini-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-right: 12px;
+    background-color: #333;
+    border: 1px solid #444;
+    object-fit: contain;
+}
+
+/* Estilo para las vidas/stocks restantes (Estrellas o Íconos) */
+td:nth-child(6) {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}

@@ -1,0 +1,10 @@
+<!ELEMENT comunidad (jugador*)>
+<!ELEMENT jugador (tag, region, rango, clan, main_id, secundario_id, foto_url)>
+<!ATTLIST jugador id ID #REQUIRED>
+<!ELEMENT tag (#PCDATA)>
+<!ELEMENT region (#PCDATA)>
+<!ELEMENT rango (#PCDATA)>
+<!ELEMENT clan (#PCDATA)>
+<!ELEMENT main_id (#PCDATA)>
+<!ELEMENT secundario_id (#PCDATA)>
+<!ELEMENT foto_url (#PCDATA)>

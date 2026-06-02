@@ -1,0 +1,9 @@
+<!ELEMENT roster (personaje*)>
+<!ELEMENT personaje (nombre, franquicia, estilo, peso_valor, tier_sugerida, imagen_url)>
+<!ATTLIST personaje id ID #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT franquicia (#PCDATA)>
+<!ELEMENT estilo (#PCDATA)>
+<!ELEMENT peso_valor (#PCDATA)>
+<!ELEMENT tier_sugerida (#PCDATA)>
+<!ELEMENT imagen_url (#PCDATA)>

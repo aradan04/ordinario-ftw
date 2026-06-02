@@ -1,0 +1,162 @@
+/* ==========================================================================
+   1. EL CONTENEDOR PRINCIPAL (Límites de pantalla)
+   ========================================================================== */
+.contenedor {
+    max-width: 1200px; /* Evita que el diseño se desparrame en pantallas gigantes */
+    margin: 40px auto; /* Centra todo el bloque horizontalmente en la pantalla */
+    padding: 0 20px;   /* Deja un colchón de seguridad a los lados en pantallas chicas */
+}
+
+/* ==========================================================================
+   2. EL LAYOUT DE LA NAVBAR (Estructura Horizontal con Flexbox)
+   ========================================================================== */
+.navbar {
+    display: flex;             /* Activa el modo caja elástica */
+    justify-content: space-between; /* Manda el logo a la izquierda y el menú a la derecha */
+    align-items: center;       /* Centra verticalmente el texto y los enlaces */
+    background-color: #000000;
+    padding: 15px 30px;
+    border-bottom: 3px solid var(--color-smash);
+    position: sticky;          /* Se queda congelada arriba al hacer scroll */
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;           /* Si no hay espacio, manda los elementos abajo sin encimarse */
+    gap: 20px; 
+}
+
+.nav-links {
+    display: flex;             /* Hace que la lista de enlaces se ponga en horizontal */
+    list-style: none;          /* Quita los puntitos negros de la lista (ul) */
+    gap: 30px;                 /* Separación exacta entre cada botón de navegación */
+    align-items: center;
+}
+
+/* ==========================================================================
+   3. EL LAYOUT DE LAS CUADRÍCULAS (Estructuras Dinámicas con CSS Grid)
+   ========================================================================== */
+
+/* Usado en el Home y Estadísticas para las tarjetas de métricas */
+.grid-resumen, .grid-estadisticas {
+    display: grid;
+    /* Crea columnas automáticas de mínimo 300px. Si caben 3, pone 3; si no, las baja */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Separación entre tarjetas */
+    margin-top: 30px;
+}
+
+/* Usado exclusivamente en roster.html para las tarjetas de los peleadores */
+.roster-grid {
+    display: grid;
+    /* Columnas más chicas (mínimo 180px) ideales para hacer el catálogo tipo Smash */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+/* ==========================================================================
+   PERFIL.HTML
+   ========================================================================== */
+
+.main-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.selector-box {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.selector-label {
+    font-weight: bold;
+}
+
+.selector-dropdown {
+    background-color: var(--bg-terciario);
+    color: var(--texto-blanco);
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 4px;
+    min-width: 300px;
+}
+
+.profile-card {
+    background-color: var(--bg-secundario);
+    border-radius: 10px;
+    padding: 30px;
+    border: 1px solid #2a2a2a;
+    box-shadow: 0 8px 20px rgba(0,0,0,.4);
+}
+
+.profile-avatar-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--color-smash);
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.player-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.status-button {
+    background-color: var(--color-smash);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.profile-details {
+    margin-top: 20px;
+}
+
+.detail-item {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.profile-divider {
+    margin: 30px 0;
+}
+
+.fighters-title {
+    margin-bottom: 20px;
+}
+
+.fighters-boxes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.box-fighter {
+    flex: 1;
+    min-width: 220px;
+    background-color: var(--bg-terciario);
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.main-box {
+    border-left: 4px solid #3498db;
+}
+
+.secondary-box {
+    border-left: 4px solid #9b59b6;
+}

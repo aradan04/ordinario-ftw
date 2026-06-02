@@ -1,0 +1,10 @@
+<!ELEMENT historial (combate*)>
+<!ELEMENT combate (rival, personaje_id, resultado, stocks, escenario)>
+<!ATTLIST combate 
+    id ID #REQUIRED
+    jugador_id NMTOKEN #REQUIRED>
+<!ELEMENT rival (#PCDATA)>
+<!ELEMENT personaje_id (#PCDATA)>
+<!ELEMENT resultado (#PCDATA)>
+<!ELEMENT stocks (#PCDATA)>
+<!ELEMENT escenario (#PCDATA)>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE roster SYSTEM "dtd/personajes.dtd">
 <roster>
-    <personaje id="65">
+    <personaje id="ID-65">
         <nombre>Joker</nombre>
         <franquicia>Persona</franquicia>
         <estilo>Rushdown</estilo>
@@ -8,7 +9,7 @@
         <tier_sugerida>S</tier_sugerida>
         <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/joker/main.png</imagen_url>
     </personaje>
-    <personaje id="74">
+    <personaje id="ID-74">
         <nombre>Pyra/Mythra</nombre>
         <franquicia>Xenoblade Chronicles</franquicia>
         <estilo>Espadachín</estilo>
@@ -16,7 +17,7 @@
         <tier_sugerida>S</tier_sugerida>
         <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/pyra_mythra/main.png</imagen_url>
     </personaje>
-    <personaje id="01">
+    <personaje id="ID-01">
         <nombre>Mario</nombre>
         <franquicia>Super Mario</franquicia>
         <estilo>All-Rounder</estilo>
@@ -24,7 +25,7 @@
         <tier_sugerida>A</tier_sugerida>
         <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/mario/main.png</imagen_url>
     </personaje>
-    <personaje id="79">
+    <personaje id="ID-79">
         <nombre>Kazuya</nombre>
         <franquicia>Tekken</franquicia>
         <estilo>Grappler</estilo>

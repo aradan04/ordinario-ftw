@@ -3,47 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historial de Retas</title>
-    <link rel="stylesheet" href="../../css/main.css">
+    <title>Perfil de Jugadores - Comunidad Smash</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../CSS/main.css">
 </head>
+<nav class="navbar">
+
+    <div class="nav-logo">
+        Smash Dashboard
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../jugador/perfil.html">Perfil</a></li>
+        <li><a href="../jugador/historial.html">Historial</a></li>
+        <li><a href="../roster/roster.html">Roster</a></li>
+        <li><a href="../torneos/torneos.html">Torneos</a></li>
+        <li><a href="../torneos/estadisticas.html">Estadísticas</a></li>
+    </ul>
+
+</nav>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-logo">SMASH DASHBOARD</div>
-        <ul class="nav-links">
-            <li><a href="../../index.html">Inicio</a></li>
-            <li><a href="perfil.html">Perfil</a></li>
-            <li><a href="historial.html" class="active">Historial</a></li>
-            <li><a href="../roster/roster.html">Roster</a></li>
-            <li><a href="../torneos/torneos.html">Torneos</a></li>
-            <li><a href="../torneos/estadisticas.html">Estadísticas</a></li>
-        </ul>
-    </nav>
+    <div class="main-container">
 
-    <main class="contenedor">
-        <h1>Historial de Combates</h1>
-        
-        <div class="resumen-card">
-            <h3>Métricas de Rendimiento</h3>
-            <p>Total de Peleas: <span id="total-peleas">0</span></p>
-            <p>Win Rate Global: <span id="win-rate">0%</span></p>
+        <!-- Selector de jugadores -->
+        <div class="selector-box">
+            <label for="select-jugador" class="selector-label">
+                Seleccionar Jugador:
+            </label>
+
+            <select id="select-jugador" class="selector-dropdown">
+                <option value="">
+                    -- Elige un jugador de la lista --
+                </option>
+            </select>
         </div>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Tu Personaje</th> <th>Estilo de Pelea</th>
-                    <th>Rival</th>
-                    <th>Resultado</th>
-                    <th>Stocks Restantes</th>
-                </tr>
-            </thead>
-            <tbody id="tabla-combates">
-                </tbody>
-        </table>
-    </main>
+        <!-- Tarjeta principal -->
+        <div class="profile-card">
 
-    <script src="../../js/vistas/historial.js"></script>
+            <!-- Foto -->
+            <div class="profile-avatar-container">
+                <img
+                    id="player-foto"
+                    src=""
+                    alt="Foto de perfil"
+                    class="profile-img"
+                >
+            </div>
+
+            <!-- Nombre y estado -->
+            <div class="profile-header">
+                <h1 id="player-nombre" class="player-title">
+                    CARGANDO...
+                </h1>
+
+                <button
+                    id="player-status"
+                    class="status-button"
+                    type="button"
+                >
+                    ANALIZANDO...
+                </button>
+            </div>
+
+            <!-- Información general -->
+            <div class="profile-details">
+
+                <p class="detail-item">
+                    <strong>Región:</strong>
+                    <span id="player-region">-</span>
+                </p>
+
+                <p class="detail-item">
+                    <strong>Clan/Team:</strong>
+                    <span id="player-clan">-</span>
+                </p>
+
+            </div>
+
+            <hr class="profile-divider">
+
+            <!-- Personajes -->
+            <div class="fighters-section">
+
+                <h2 class="fighters-title">
+                    LUCHADORES PRINCIPALES
+                </h2>
+
+                <div class="fighters-boxes">
+
+                    <div class="box-fighter main-box">
+                        <strong>Main:</strong>
+                        <span id="player-main">-</span>
+                    </div>
+
+                    <div class="box-fighter secondary-box">
+                        <strong>Secundario:</strong>
+                        <span id="player-secundario">-</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../../js/vistas/perfil.js"></script>
+
 </body>
+
 </html>

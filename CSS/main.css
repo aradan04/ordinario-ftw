@@ -1,0 +1,443 @@
+/* ==========================================================================
+   1. VARIABLES GLOBALES Y RESET
+   ========================================================================== */
+
+:root {
+    --bg-principal: #121212;      /* Fondo general oscuro */
+    --bg-secundario: #1c1c1c;     /* Fondo de tarjetas y contenedores */
+    --bg-terciario: #282828;      /* Fondo para inputs y elementos interactivos */
+    --color-smash: #ff0043;       /* Rojo característico de Smash Bros */
+    --color-victoria: #2ecc71;    /* Verde para estados ganados */
+    --color-derrota: #e74c3c;     /* Rojo suave para estados perdidos */
+    --texto-blanco: #ffffff;
+    --texto-gris: #aaaaaa;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-blanco);
+    font-family: var(--fuente-principal);
+    line-height: 1.6;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    margin: 20px 0;
+}
+
+/* ==========================================================================
+   2. BARRA DE NAVEGACIÓN GLOBAL (Navbar) MODIFICADA
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 15px 30px;
+    border-bottom: 3px solid var(--color-smash);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+    /* NUEVO: Evita que si la pantalla es chica los elementos se encimen, 
+       mejor los manda hacia abajo elegantemente si no caben */
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+.nav-logo {
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: var(--texto-blanco);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+    /* NUEVO: Forzamos a que el logo se mantenga en una sola línea 
+       y no se rompa a la mitad */
+    white-space: nowrap; 
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    
+    /* MODIFICADO: Aumentamos la separación entre cada enlace individual (Inicio, Perfil, Roster...) */
+    gap: 30px; 
+    align-items: center;
+}
+
+/* ==========================================================================
+   3. COMPONENTES: TARJETAS DE RESUMEN Y MÉTRICAS
+   ========================================================================== */
+.grid-resumen, .grid-estadisticas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.tarjeta-resumen, .card-metrica {
+    background-color: var(--bg-secundario);
+    padding: 25px;
+    border-radius: 6px;
+    border-left: 5px solid #444;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.tarjeta-resumen.destacado {
+    border-left-color: var(--color-smash);
+    background: linear-gradient(135deg, var(--bg-secundario) 0%, #250a12 100%);
+}
+
+.tarjeta-resumen h3, .card-metrica h3 {
+    font-size: 0.9rem;
+    color: var(--texto-gris);
+    margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   4. VISTA: JUGADOR (Perfil e Historial)
+   ========================================================================== */
+.perfil-box {
+    background-color: var(--bg-secundario);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Estilo dinámico si el rango es Elite Smash (Se activará por JS) */
+.perfil-box.elite-rank {
+    border: 2px solid #f1c40f;
+    box-shadow: 0 0 20px rgba(241, 196, 15, 0.2);
+}
+
+.perfil-avatar {
+    margin-bottom: 20px;
+}
+
+.perfil-avatar img {
+    border: 3px solid var(--color-smash);
+    object-fit: cover;
+}
+
+.perfil-header {
+    margin-bottom: 20px;
+}
+
+.badge {
+    background-color: var(--color-smash);
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.perfil-detalles p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.mains-flex {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.fighter-badge {
+    background-color: var(--bg-terciario);
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.fighter-badge.main {
+    border-bottom: 3px solid #3498db;
+}
+
+.fighter-badge.secundario {
+    border-bottom: 3px solid #9b59b6;
+}
+
+/* ==========================================================================
+   5. TABLAS (Historial de Combates)
+   ========================================================================== */
+.resumen-card {
+    background-color: var(--bg-secundario);
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-secundario);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+th, td {
+    padding: 14px 18px;
+    text-align: left;
+}
+
+th {
+    background-color: #0b0b0b;
+    color: var(--color-smash);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--color-smash);
+}
+
+td {
+    border-bottom: 1px solid #252525;
+    font-size: 0.95rem;
+}
+
+/* Filas dinámicas controladas por las operaciones lógicas de JS */
+tr.ganado {
+    background-color: rgba(46, 204, 113, 0.05);
+}
+tr.ganado td:nth-child(5) {
+    color: var(--color-victoria);
+    font-weight: bold;
+}
+
+tr.perdido {
+    background-color: rgba(231, 76, 60, 0.03);
+}
+tr.perdido td:nth-child(5) {
+    color: var(--color-derrota);
+    font-weight: bold;
+}
+
+/* Mini íconos del historial */
+.mini-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-color: #333;
+}
+
+/* ==========================================================================
+   6. VISTA: ROSTER (Fighter Grid y Filtros)
+   ========================================================================== */
+.roster-header {
+    margin-bottom: 35px;
+}
+
+.filtro-control {
+    margin-top: 20px;
+    background-color: var(--bg-secundario);
+    padding: 15px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.filtro-control select {
+    background-color: var(--bg-terciario);
+    color: var(--texto-blanco);
+    border: 1px solid #444;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-fighter {
+    background-color: var(--bg-secundario);
+    border-radius: 6px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--texto-blanco);
+    border: 1px solid #252525;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.tarjeta-fighter:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-smash);
+    box-shadow: 0 5px 15px rgba(255, 0, 67, 0.2);
+}
+
+.tarjeta-fighter img {
+    max-width: 100%;
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.5));
+}
+
+.tarjeta-fighter h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* ==========================================================================
+   7. BOTONES Y DETALLES EXTRA
+   ========================================================================== */
+.btn-regresar {
+    display: inline-block;
+    color: var(--texto-gris);
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.btn-regresar:hover {
+    color: var(--color-smash);
+}
+
+/* ==========================================================================
+   ESTILOS PARA PERFIL.HTML
+   ========================================================================== */
+
+.main-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.selector-box {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.selector-label {
+    font-weight: bold;
+}
+
+.selector-dropdown {
+    background-color: var(--bg-terciario);
+    color: var(--texto-blanco);
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 280px;
+}
+
+.profile-card {
+    background-color: var(--bg-secundario);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.profile-avatar-container {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--color-smash);
+    background-color: #333;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.player-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.status-button {
+    background-color: var(--color-smash);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.profile-details {
+    margin-top: 20px;
+}
+
+.detail-item {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.profile-divider {
+    margin: 30px 0;
+}
+
+.fighters-title {
+    margin-bottom: 20px;
+}
+
+.fighters-boxes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.box-fighter {
+    flex: 1;
+    min-width: 220px;
+    background-color: var(--bg-terciario);
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.main-box {
+    border-left: 5px solid #3498db;
+}
+
+.secondary-box {
+    border-left: 5px solid #9b59b6;
+}

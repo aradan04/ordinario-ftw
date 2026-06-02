@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <comunidad>
-    <jugador id="SMASH-01">
-        <tag>MkLeo</tag>
+    <jugador id="1">
+        <nombre>MkLeo</nombre>
+        <foto>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcdfnROaoM24__MAiKCc9kw9iaN8UoyTCsmQ&amp;s</foto>
         <region>México</region>
-        <rango>Elite Smash</rango>
-        <clan>T1</clan>
-        <main_id>65</main_id>
-        <secundario_id>74</secundario_id>
-        <foto_url>https://api.dicebear.com/7.x/bottts/svg?seed=MkLeo</foto_url>
+        <clan>Luminosity Gaming</clan>
+        <main>Byleth</main>
+        <secundario>Joker</secundario>
     </jugador>
-    <jugador id="SMASH-02">
-        <tag>Sparg0</tag>
-        <region>Baja California</region>
-        <rango>Elite Smash</rango>
-        <clan>FaZe</clan>
-        <main_id>74</main_id>
-        <secundario_id>01</secundario_id>
-        <foto_url>https://api.dicebear.com/7.x/bottts/svg?seed=Sparg0</foto_url>
+    <jugador id="2">
+        <nombre>Sparg0</nombre>
+        <foto>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3LApDMx6aU3mlllDANqr_uSLcCUdk7GoDUA&amp;s</foto>
+        <region>México</region>
+        <clan>FaZe Clan</clan>
+        <main>Cloud</main>
+        <secundario>Pyra/Mythra</secundario>
     </jugador>
 </comunidad>

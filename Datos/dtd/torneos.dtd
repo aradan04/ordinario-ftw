@@ -1,0 +1,9 @@
+<!ELEMENT calendario (torneo*)>
+<!ELEMENT torneo (nombre, sede, fecha, participantes, estado_manual, logo_url)>
+<!ATTLIST torneo id ID #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT sede (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT participantes (#PCDATA)>
+<!ELEMENT estado_manual (#PCDATA)>
+<!ELEMENT logo_url (#PCDATA)>
