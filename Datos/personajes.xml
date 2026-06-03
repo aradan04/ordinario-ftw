@@ -7,7 +7,7 @@
         <estilo>Rushdown</estilo>
         <peso_valor>93</peso_valor>
         <tier_sugerida>S</tier_sugerida>
-        <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/joker/main.png</imagen_url>
+        <imagen_url>https://images.wikidexcdn.net/mwuploads/esssbwiki/thumb/5/5c/latest/20190417202701/Joker_SSBU.png/1200px-Joker_SSBU.png</imagen_url>
     </personaje>
     <personaje id="ID-74">
         <nombre>Pyra/Mythra</nombre>
@@ -15,7 +15,7 @@
         <estilo>Espadachín</estilo>
         <peso_valor>98</peso_valor>
         <tier_sugerida>S</tier_sugerida>
-        <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/pyra_mythra/main.png</imagen_url>
+        <imagen_url>https://upload.wikimedia.org/wikipedia/en/6/66/Pyra_%26_Mythra_artwork_%28SSBU%29.png</imagen_url>
     </personaje>
     <personaje id="ID-01">
         <nombre>Mario</nombre>
@@ -23,7 +23,7 @@
         <estilo>All-Rounder</estilo>
         <peso_valor>98</peso_valor>
         <tier_sugerida>A</tier_sugerida>
-        <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/mario/main.png</imagen_url>
+        <imagen_url>https://images.wikidexcdn.net/mwuploads/esssbwiki/4/44/latest/20180613001020/Mario_SSBU.png</imagen_url>
     </personaje>
     <personaje id="ID-79">
         <nombre>Kazuya</nombre>
@@ -31,6 +31,209 @@
         <estilo>Grappler</estilo>
         <peso_valor>113</peso_valor>
         <tier_sugerida>A</tier_sugerida>
-        <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/kazuya/main.png</imagen_url>
+        <imagen_url>https://images.wikidexcdn.net/mwuploads/esssbwiki/thumb/d/d9/latest/20210630195825/Kazuya_SSBU.png/1200px-Kazuya_SSBU.png</imagen_url>
     </personaje>
+    <personaje id="ID-04">
+    <nombre>Samus</nombre>
+    <franquicia>Metroid</franquicia>
+    <estilo>Zoner</estilo>
+    <peso_valor>108</peso_valor>
+    <tier_sugerida>A</tier_sugerida>
+    <imagen_url>https://images.wikidexcdn.net/mwuploads/esssbwiki/thumb/0/03/latest/20230410032906/Samus_SSBU.png/1200px-Samus_SSBU.png</imagen_url>
+</personaje>
+<personaje id="ID-31">
+    <nombre>Snake</nombre>
+    <franquicia>Metal Gear</franquicia>
+    <estilo>Zoner</estilo>
+    <peso_valor>106</peso_valor>
+    <tier_sugerida>S</tier_sugerida>
+    <imagen_url>https://images.wikidexcdn.net/mwuploads/esssbwiki/thumb/0/02/latest/20180613005941/Snake_SSBU.png/1200px-Snake_SSBU.png</imagen_url>
+</personaje>
+<personaje id="ID-21">
+    <nombre>Marth</nombre>
+    <franquicia>Fire Emblem</franquicia>
+    <estilo>Espadachín</estilo>
+    <peso_valor>90</peso_valor>
+    <tier_sugerida>A</tier_sugerida>
+    <imagen_url>https://images.wikidexcdn.net/mwuploads/esssbwiki/thumb/e/e9/latest/20180613004101/Marth_SSBU.png/1200px-Marth_SSBU.png</imagen_url>
+</personaje>
+
+<personaje id="ID-22">
+    <nombre>Lucina</nombre>
+    <franquicia>Fire Emblem</franquicia>
+    <estilo>Espadachín</estilo>
+    <peso_valor>92</peso_valor>
+    <tier_sugerida>A</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/lucina/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-23">
+    <nombre>Roy</nombre>
+    <franquicia>Fire Emblem</franquicia>
+    <estilo>Rushdown</estilo>
+    <peso_valor>95</peso_valor>
+    <tier_sugerida>A</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/roy/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-24">
+    <nombre>Chrom</nombre>
+    <franquicia>Fire Emblem</franquicia>
+    <estilo>Rushdown</estilo>
+    <peso_valor>95</peso_valor>
+    <tier_sugerida>A</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/chrom/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-25">
+    <nombre>Ike</nombre>
+    <franquicia>Fire Emblem</franquicia>
+    <estilo>Espadachín</estilo>
+    <peso_valor>107</peso_valor>
+    <tier_sugerida>A</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/ike/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-26">
+    <nombre>Robin</nombre>
+    <franquicia>Fire Emblem</franquicia>
+    <estilo>Zoner</estilo>
+    <peso_valor>95</peso_valor>
+    <tier_sugerida>B</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/robin/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-27">
+    <nombre>Corrin</nombre>
+    <franquicia>Fire Emblem</franquicia>
+    <estilo>Espadachín</estilo>
+    <peso_valor>98</peso_valor>
+    <tier_sugerida>B</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/corrin/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-28">
+    <nombre>Byleth</nombre>
+    <franquicia>Fire Emblem</franquicia>
+    <estilo>Zoner</estilo>
+    <peso_valor>97</peso_valor>
+    <tier_sugerida>A</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/byleth/main.png</imagen_url>
+</personaje>
+<personaje id="ID-37">
+    <nombre>Pit</nombre>
+    <franquicia>Kid Icarus</franquicia>
+    <estilo>All-Rounder</estilo>
+    <peso_valor>96</peso_valor>
+    <tier_sugerida>B</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/pit/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-38">
+    <nombre>Dark Pit</nombre>
+    <franquicia>Kid Icarus</franquicia>
+    <estilo>All-Rounder</estilo>
+    <peso_valor>96</peso_valor>
+    <tier_sugerida>B</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/dark_pit/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-54">
+    <nombre>Palutena</nombre>
+    <franquicia>Kid Icarus</franquicia>
+    <estilo>Zoner</estilo>
+    <peso_valor>91</peso_valor>
+    <tier_sugerida>S</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/palutena/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-02">
+    <nombre>Donkey Kong</nombre>
+    <franquicia>Super Mario</franquicia>
+    <estilo>Grappler</estilo>
+    <peso_valor>127</peso_valor>
+    <tier_sugerida>B</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/donkey_kong/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-12">
+    <nombre>Luigi</nombre>
+    <franquicia>Super Mario</franquicia>
+    <estilo>Grappler</estilo>
+    <peso_valor>97</peso_valor>
+    <tier_sugerida>A</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/luigi/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-13">
+    <nombre>Peach</nombre>
+    <franquicia>Super Mario</franquicia>
+    <estilo>All-Rounder</estilo>
+    <peso_valor>89</peso_valor>
+    <tier_sugerida>S</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/peach/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-13E">
+    <nombre>Daisy</nombre>
+    <franquicia>Super Mario</franquicia>
+    <estilo>All-Rounder</estilo>
+    <peso_valor>89</peso_valor>
+    <tier_sugerida>A</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/daisy/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-18">
+    <nombre>Dr. Mario</nombre>
+    <franquicia>Super Mario</franquicia>
+    <estilo>All-Rounder</estilo>
+    <peso_valor>98</peso_valor>
+    <tier_sugerida>C</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/dr_mario/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-24M">
+    <nombre>Bowser</nombre>
+    <franquicia>Super Mario</franquicia>
+    <estilo>Grappler</estilo>
+    <peso_valor>135</peso_valor>
+    <tier_sugerida>A</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/bowser/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-35">
+    <nombre>Rosalina y Luma</nombre>
+    <franquicia>Super Mario</franquicia>
+    <estilo>Zoner</estilo>
+    <peso_valor>82</peso_valor>
+    <tier_sugerida>B</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/rosalina_and_luma/main_sp.png</imagen_url>
+</personaje>
+
+<personaje id="ID-46">
+    <nombre>Bowser Jr.</nombre>
+    <franquicia>Super Mario</franquicia>
+    <estilo>Zoner</estilo>
+    <peso_valor>108</peso_valor>
+    <tier_sugerida>B</tier_sugerida>
+    <imagen_url>https://images.wikidexcdn.net/mwuploads/esssbwiki/thumb/5/54/latest/20220531161025/Bowser_Jr._en_Mario_Rabbids_Kingdom_Battle.png/200px-Bowser_Jr._en_Mario_Rabbids_Kingdom_Battle.png</imagen_url>
+</personaje>
+
+<personaje id="ID-66">
+    <nombre>Piranha Plant</nombre>
+    <franquicia>Super Mario</franquicia>
+    <estilo>Zoner</estilo>
+    <peso_valor>112</peso_valor>
+    <tier_sugerida>B</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/piranha_plant/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-78">
+    <nombre>Steve</nombre>
+    <franquicia>Minecraft</franquicia>
+    <estilo>Zoner</estilo>
+    <peso_valor>92</peso_valor>
+    <tier_sugerida>S</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/steve/main.png</imagen_url>
+</personaje>
 </roster>
