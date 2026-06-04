@@ -34,12 +34,12 @@ table {
     border-collapse: collapse;
     background-color: var(--bg-secundario);
     border-radius: 8px;
-    overflow: hidden; /* Mantiene los bordes redondeados en las esquinas */
+    overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.4);
     margin-top: 20px;
 }
 
-/* 3. Encabezados (Th) */
+/* 3. Encabezados */
 th {
     background-color: #0b0b0b;
     color: var(--color-smash);
@@ -51,7 +51,7 @@ th {
     border-bottom: 2px solid var(--color-smash);
 }
 
-/* 4. Celdas de Datos (Td) */
+/* 4. Celdas */
 td {
     padding: 14px 18px;
     color: var(--texto-blanco);
@@ -60,7 +60,7 @@ td {
     vertical-align: middle;
 }
 
-/* Efecto Hover para resaltar la fila donde pasa el mouse */
+/* Hover */
 tbody tr {
     transition: background-color 0.2s ease;
 }
@@ -69,15 +69,12 @@ tbody tr:hover {
     background-color: rgba(255, 255, 255, 0.02) !important;
 }
 
-/* 5. Clases Dinámicas (Inyectadas por las operaciones lógicas de JS) */
-
-/* Configuración para Fila Ganada */
+/* Filas ganadas */
 tr.ganado {
     background-color: rgba(46, 204, 113, 0.03);
 }
 
-/* Resalta la celda del resultado "Victoria" en verde */
-tr.ganado td:nth-child(5) {
+tr.ganado td:nth-child(6) {
     color: var(--color-victoria);
     font-weight: bold;
     text-transform: uppercase;
@@ -85,13 +82,12 @@ tr.ganado td:nth-child(5) {
     letter-spacing: 0.5px;
 }
 
-/* Configuración para Fila Perdida */
+/* Filas perdidas */
 tr.perdido {
     background-color: rgba(231, 76, 60, 0.01);
 }
 
-/* Resalta la celda del resultado "Derrota" en rojo */
-tr.perdido td:nth-child(5) {
+tr.perdido td:nth-child(6) {
     color: var(--color-derrota);
     font-weight: bold;
     text-transform: uppercase;
@@ -99,7 +95,7 @@ tr.perdido td:nth-child(5) {
     letter-spacing: 0.5px;
 }
 
-/* 6. Elementos multimedia dentro de las celdas */
+/* Avatar */
 .mini-avatar {
     width: 35px;
     height: 35px;
@@ -111,8 +107,8 @@ tr.perdido td:nth-child(5) {
     object-fit: contain;
 }
 
-/* Estilo para las vidas/stocks restantes (Estrellas o Íconos) */
-td:nth-child(6) {
+/* Stocks */
+td:nth-child(7) {
     font-size: 1.1rem;
     letter-spacing: 2px;
 }
