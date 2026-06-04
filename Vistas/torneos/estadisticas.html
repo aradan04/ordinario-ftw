@@ -21,31 +21,99 @@
     </nav>
 
     <main class="contenedor">
-        <h1>Métricas y Analíticas Globales</h1>
-        <p>Análisis en tiempo real del rendimiento de los jugadores registrados.</p>
+
+        <h1>MÉTRICAS Y ANALÍTICAS GLOBALES</h1>
+        <p>
+            Consulta el rendimiento de cada jugador registrado mediante
+            estadísticas generadas dinámicamente desde XML.
+        </p>
+
+        <div class="filtro-control">
+            <label for="select-jugador">Seleccionar Jugador:</label>
+
+            <select id="select-jugador">
+                <option value="">
+                    -- Selecciona un jugador --
+                </option>
+            </select>
+        </div>
+
+        <br><br>
 
         <section class="grid-estadisticas">
+
             <div class="card-metrica">
-                <h3>Efectividad Total (Win Rate)</h3>
-                <h2 id="global-winrate">0%</h2>
-                <div class="barra-progreso-bg" style="background: #333; border-radius: 4px; height: 15px; width: 100%; overflow: hidden;">
-                    <div id="barra-winrate" style="background: #2ecc71; height: 100%; width: 0%; transition: width 0.5s;"></div>
+                <h3>WIN RATE</h3>
+
+                <h2 id="global-winrate">
+                    0%
+                </h2>
+
+                <div
+                    style="
+                    background:#333;
+                    height:15px;
+                    border-radius:4px;
+                    overflow:hidden;">
+
+                    <div
+                        id="barra-winrate"
+                        style="
+                        background:#2ecc71;
+                        height:100%;
+                        width:0%;
+                        transition: width 0.5s;">
+                    </div>
+
                 </div>
             </div>
 
-            <div class="card-metrica" style="display: flex; align-items: center; gap: 20px; background: #222; padding: 20px; border-radius: 8px;">
-                <div class="meta-img">
-                    <img id="img-mas-usado" src="" alt="Fighter más usado" style="max-width: 80px; height: auto; display: none;">
-                </div>
-                <div class="meta-info">
-                    <h3>Luchador Más Utilizado</h3>
-                    <h4 id="nombre-mas-usado" style="color: #ff0043; margin: 5px 0;">Calculando...</h4>
-                    <p>Total de apariciones: <span id="usos-mas-usado">0</span></p>
-                </div>
+            <div class="card-metrica">
+                <h3>VICTORIAS</h3>
+                <h2 id="victorias">0</h2>
             </div>
+
+            <div class="card-metrica">
+                <h3>DERROTAS</h3>
+                <h2 id="derrotas">0</h2>
+            </div>
+
+            <div class="card-metrica">
+                <h3>COMBATES TOTALES</h3>
+                <h2 id="total-combates">0</h2>
+            </div>
+
+            <div class="card-metrica">
+
+                <!-- CONTENEDOR NUEVO -->
+                <div class="contenedor-personaje">
+
+                    <img
+                        id="img-mas-usado"
+                        src=""
+                        alt="Personaje más usado"
+                        class="img-personaje-estadistica">
+
+                </div>
+
+                <h3>PERSONAJE MÁS UTILIZADO</h3>
+
+                <h2 id="nombre-mas-usado">
+                    SIN DATOS
+                </h2>
+
+                <p>
+                    Apariciones:
+                    <span id="usos-mas-usado">0</span>
+                </p>
+
+            </div>
+
         </section>
+
     </main>
 
     <script src="../../js/vistas/estadisticas.js"></script>
+
 </body>
 </html>

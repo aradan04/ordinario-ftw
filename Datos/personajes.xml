@@ -236,4 +236,85 @@
     <tier_sugerida>S</tier_sugerida>
     <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/steve/main.png</imagen_url>
 </personaje>
+
+<personaje id="ID-73">
+    <nombre>Cloud</nombre>
+    <franquicia>Final Fantasy VII</franquicia>
+    <estilo>Espadachín</estilo>
+    <peso_valor>100</peso_valor>
+    <tier_sugerida>S</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/cloud/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-08">
+    <nombre>Pikachu</nombre>
+    <franquicia>Pokémon</franquicia>
+    <estilo>Rushdown</estilo>
+    <peso_valor>79</peso_valor>
+    <tier_sugerida>S</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/pikachu/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-09">
+    <nombre>Jigglypuff</nombre>
+    <franquicia>Pokémon</franquicia>
+    <estilo>Aéreo</estilo>
+    <peso_valor>68</peso_valor>
+    <tier_sugerida>B</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/purin/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-19">
+    <nombre>Pichu</nombre>
+    <franquicia>Pokémon</franquicia>
+    <estilo>Rushdown</estilo>
+    <peso_valor>62</peso_valor>
+    <tier_sugerida>A</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/pichu/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-20">
+    <nombre>Mewtwo</nombre>
+    <franquicia>Pokémon</franquicia>
+    <estilo>Zoner</estilo>
+    <peso_valor>79</peso_valor>
+    <tier_sugerida>A</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/mewtwo/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-29">
+    <nombre>Pokémon Trainer</nombre>
+    <franquicia>Pokémon</franquicia>
+    <estilo>Versátil</estilo>
+    <peso_valor>90</peso_valor>
+    <tier_sugerida>S</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/pokemon_trainer/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-39">
+    <nombre>Lucario</nombre>
+    <franquicia>Pokémon</franquicia>
+    <estilo>All-Rounder</estilo>
+    <peso_valor>92</peso_valor>
+    <tier_sugerida>B</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/lucario/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-44">
+    <nombre>Greninja</nombre>
+    <franquicia>Pokémon</franquicia>
+    <estilo>Rushdown</estilo>
+    <peso_valor>88</peso_valor>
+    <tier_sugerida>A</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/gekkouga/main.png</imagen_url>
+</personaje>
+
+<personaje id="ID-57">
+    <nombre>Incineroar</nombre>
+    <franquicia>Pokémon</franquicia>
+    <estilo>Grappler</estilo>
+    <peso_valor>116</peso_valor>
+    <tier_sugerida>B</tier_sugerida>
+    <imagen_url>https://www.smashbros.com/assets_v2/img/fighter/gaogaen/main.png</imagen_url>
+</personaje>
 </roster>
