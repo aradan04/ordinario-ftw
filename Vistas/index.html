@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smash Ultimate Dashboard - Home</title>
+    <title>SmashDex - Home</title>
     <link rel="stylesheet" href="../CSS/main.css">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="nav-logo">SMASH DASHBOARD</div>
+        <div class="nav-logo">SMASHDEX</div>
         <ul class="nav-links">
             <li><a href="index.html" class="active">Inicio</a></li>
             <li><a href="../Vistas/jugador/perfil.html">Perfil</a></li>
@@ -21,28 +21,41 @@
     </nav>
 
     <main class="contenedor">
+
         <header class="bienvenida">
-            <h1>Bienvenido al Smash Dashboard</h1>
+            <h1>Bienvenido a SmashDex</h1>
             <p>Análisis estadístico, gestión de perfiles y consulta de luchadores de Super Smash Bros. Ultimate.</p>
+
+            <!-- Logo oficial de Smash -->
+            <div class="logo-smash">
+                <img
+                    src="https://cdn.prod.website-files.com/62fe6dae22d31a114ae0f6fc/63067d0481dae407eaee7e12_super_smash_white_logo.webp"
+                    alt="Super Smash Bros. Ultimate"
+                    class="img-logo-smash">
+            </div>
         </header>
 
         <section class="grid-resumen">
+
             <div class="tarjeta-resumen">
                 <h3>Estado de la Base de Datos</h3>
                 <p>Combates Registrados: <span id="num-combates">Cargando...</span></p>
                 <p>Luchadores en Roster: <span id="num-personajes">Cargando...</span></p>
             </div>
-            
+
             <div class="tarjeta-resumen destacado">
                 <h3>Jugador Destacado</h3>
                 <h4 id="tag-destacado">Cargando...</h4>
-                <p>Rango: <span id="rango-destacado">-</span></p>
+                <p>Región: <span id="region-destacado">-</span></p>
+                <p>Clan: <span id="clan-destacado">-</span></p>
+                <p>Main: <span id="main-destacado">-</span></p>
             </div>
+
         </section>
+
     </main>
 
-    <script src="../js/modulos/api.js"></script>
-    <script src="../js/vistas/estadisticas.js"></script>
     <script src="../js/main.js"></script>
+
 </body>
 </html>

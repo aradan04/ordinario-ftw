@@ -1,48 +1,85 @@
-/**
- * js/main.js
- * Lógica global de la plataforma (Navbar interactiva y configuraciones del sistema).
- */
+document.addEventListener("DOMContentLoaded", async () => {
 
-function inicializarConfiguracionGlobal() {
-    console.log("⚔️ Smash Dashboard: Sistema global inicializado correctamente.");
-    
-    // Ejecutar el iluminador dinámico de la barra de navegación
-    configurarNavbarActiva();
-}
+    // ── Cargar los tres XMLs ──────────────────────────────────────
+    const xmlCombates  = await cargarXML("../datos/combates.xml");
+    const xmlPersonajes = await cargarXML("../datos/personajes.xml");
+    const xmlJugadores = await cargarXML("../datos/jugadores.xml");
 
-/**
- * Operación lógica que analiza la URL actual del navegador 
- * y le añade la clase CSS '.active' al enlace correspondiente.
- */
-function configurarNavbarActiva() {
-    // 1. Obtener la ruta de la página actual (ej: /vistas/jugador/perfil.html)
-    const rutaActual = window.location.pathname;
-    
-    // 2. Capturar todos los enlaces de la barra de navegación
-    const enlacesNav = document.querySelectorAll('.nav-links a');
+    if (!xmlCombates || !xmlPersonajes || !xmlJugadores) {
+        console.error("Error al cargar uno o más archivos XML.");
+        return;
+    }
 
-    // 3. Recorrer los enlaces y evaluar lógicamente cuál coincide con la URL
-    enlacesNav.forEach(enlace => {
-        // Quitamos la clase active que traiga por defecto el HTML estático
-        enlace.classList.remove('active');
+    // ── Contador de combates ──────────────────────────────────────
+    const combates = xmlCombates.getElementsByTagName("combate");
+    document.getElementById("num-combates").innerText = combates.length;
 
-        // Obtener el atributo href del enlace (ej: perfil.html o ../roster/roster.html)
-        const hrefAtributo = enlace.getAttribute('href');
+    // ── Contador de personajes ────────────────────────────────────
+    const personajes = xmlPersonajes.getElementsByTagName("personaje");
+    document.getElementById("num-personajes").innerText = personajes.length;
 
-        // Limpiamos los saltos de carpeta "../" para comparar solo el nombre del archivo
-        const nombreArchivoEnlace = hrefAtributo.replace(/\.\.\//g, "");
+    // ── Jugador destacado: el que tenga más victorias ─────────────
+    const jugadores = xmlJugadores.getElementsByTagName("jugador");
 
-        // Si la URL actual contiene el nombre del archivo del enlace, lo iluminamos
-        if (rutaActual.includes(nombreArchivoEnlace)) {
-            enlace.classList.add('active');
+    let jugadorDestacado = null;
+    let maxVictorias = -1;
+
+    for (let i = 0; i < jugadores.length; i++) {
+
+        const jugador = jugadores[i];
+        const id      = jugador.getAttribute("id").trim();
+        let victorias = 0;
+
+        for (let j = 0; j < combates.length; j++) {
+
+            const combate     = combates[j];
+            const jugadorId   = combate.getAttribute("jugador_id").trim();
+            const resultado   = combate
+                .getElementsByTagName("resultado")[0]
+                .textContent.trim().toLowerCase();
+
+            if (jugadorId === id && resultado === "victoria") {
+                victorias++;
+            }
         }
-        
-        // Caso especial para la raíz (Página de Inicio / index.html)
-        if ((rutaActual.endsWith('/') || rutaActual.endsWith('index.html')) && nombreArchivoEnlace === 'index.html') {
-            enlace.classList.add('active');
-        }
-    });
-}
 
-// Escuchar el evento de carga global para arrancar las configuraciones de la plataforma
-document.addEventListener('DOMContentLoaded', inicializarConfiguracionGlobal);
+        if (victorias > maxVictorias) {
+            maxVictorias     = victorias;
+            jugadorDestacado = jugador;
+        }
+    }
+
+    if (jugadorDestacado) {
+
+        const nombre = jugadorDestacado
+            .getElementsByTagName("nombre")[0].textContent.trim();
+
+        const region = jugadorDestacado
+            .getElementsByTagName("region")[0].textContent.trim();
+
+        const clan = jugadorDestacado
+            .getElementsByTagName("clan")[0].textContent.trim();
+
+        const main = jugadorDestacado
+            .getElementsByTagName("main")[0].textContent.trim();
+
+        document.getElementById("tag-destacado").innerText    = nombre;
+        document.getElementById("region-destacado").innerText = region;
+        document.getElementById("clan-destacado").innerText   = clan;
+        document.getElementById("main-destacado").innerText   = main;
+    }
+
+    // ── Utilidad: carga y parsea un XML ──────────────────────────
+    async function cargarXML(ruta) {
+        try {
+            const respuesta = await fetch(ruta);
+            if (!respuesta.ok) throw new Error("No se pudo cargar: " + ruta);
+            const texto = await respuesta.text();
+            return new DOMParser().parseFromString(texto, "text/xml");
+        } catch (error) {
+            console.error(error);
+            return null;
+        }
+    }
+
+});
