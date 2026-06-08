@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", async () => {
 
-    const xmlJugadores = await cargarXML("../../datos/jugadores.xml");
-    const xmlCombates  = await cargarXML("../../datos/combates.xml");
-    const xmlPersonajes = await cargarXML("../../datos/personajes.xml");
+    // CORREGIDO: Rutas relativas directas desde la raíz para evitar errores 404 en GitHub Pages
+    const xmlJugadores = await cargarXML("datos/jugadores.xml");
+    const xmlCombates   = await cargarXML("datos/combates.xml");
+    const xmlPersonajes = await cargarXML("datos/personajes.xml");
 
     if (!xmlJugadores || !xmlCombates || !xmlPersonajes) {
         console.error("Error cargando XML");
@@ -138,7 +139,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     async function cargarXML(ruta) {
         try {
             const respuesta = await fetch(ruta);
-            if (!respuesta.ok) throw new Error("No se pudo cargar " + ruta);
+            // CORREGIDO: Mensaje de error mejorado para debuguear fácilmente el estado HTTP (como un 404)
+            if (!respuesta.ok) throw new Error(`No se pudo cargar ${ruta}. Estado: ${respuesta.status}`);
             const texto = await respuesta.text();
             return new DOMParser().parseFromString(texto, "text/xml");
         } catch (error) {
