@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", async () => {
 
     // ── Cargar los tres XMLs ──────────────────────────────────────
-    const xmlCombates  = await cargarXML("../datos/combates.xml");
-    const xmlPersonajes = await cargarXML("../datos/personajes.xml");
-    const xmlJugadores = await cargarXML("../datos/jugadores.xml");
+    const xmlCombates  = await cargarXML("datos/combates.xml");
+    const xmlPersonajes = await cargarXML("datos/personajes.xml");
+    const xmlJugadores = await cargarXML("datos/jugadores.xml");
 
     if (!xmlCombates || !xmlPersonajes || !xmlJugadores) {
         console.error("Error al cargar uno o más archivos XML.");
