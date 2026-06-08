@@ -1,20 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE calendario SYSTEM "dtd/torneos.dtd">
 <calendario>
+
     <torneo id="T-2026-01">
         <nombre>Smash Factor XI</nombre>
         <sede>Puebla, México</sede>
         <fecha>2026-07-15</fecha>
         <participantes>512</participantes>
         <estado_manual>Programado</estado_manual>
-        <logo_url>https://api.dicebear.com/7.x/initials/svg?seed=SF&amp;backgroundColor=ff0043</logo_url>
+        <logo_url>https://images.start.gg/images/tournament/629921/image-0f8e0b57b20bc5013f83b389ab1c465a.png</logo_url>
     </torneo>
+
     <torneo id="T-2026-02">
         <nombre>Genesis X</nombre>
         <sede>California, USA</sede>
         <fecha>2026-02-18</fecha>
         <participantes>1024</participantes>
         <estado_manual>Finalizado</estado_manual>
-        <logo_url>https://api.dicebear.com/7.x/initials/svg?seed=GX&amp;backgroundColor=0055ff</logo_url>
+        <logo_url>https://ssb.wiki.gallery/images/8/8e/GENESIS_X.png</logo_url>
     </torneo>
+
+    <torneo id="T-2026-03">
+        <nombre>EVO Japan</nombre>
+        <sede>Tokio, Japón</sede>
+        <fecha>2026-04-25</fecha>
+        <participantes>768</participantes>
+        <estado_manual>Finalizado</estado_manual>
+        <logo_url>data:image/jpeg;base64,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</logo_url>
+    </torneo>
+
+    <torneo id="T-2026-04">
+        <nombre>Supernova</nombre>
+        <sede>Washington D.C., USA</sede>
+        <fecha>2026-08-12</fecha>
+        <participantes>1400</participantes>
+        <estado_manual>Programado</estado_manual>
+        <logo_url>https://images.start.gg/images/tournament/777707/image-e88c178c13f6cbf9d3b7dac31f08d3b5.png</logo_url>
+    </torneo>
+
+    <torneo id="T-2026-05">
+        <nombre>Mainstage</nombre>
+        <sede>Ontario, California</sede>
+        <fecha>2026-11-20</fecha>
+        <participantes>850</participantes>
+        <estado_manual>Programado</estado_manual>
+        <logo_url>https://ssb.wiki.gallery/images/c/ce/Mainstage.jpg</logo_url>
+    </torneo>
+
+    <torneo id="T-2026-06">
+        <nombre>Kagaribi</nombre>
+        <sede>Tokio, Japón</sede>
+        <fecha>2026-03-08</fecha>
+        <participantes>1200</participantes>
+        <estado_manual>Finalizado</estado_manual>
+        <logo_url>https://images.start.gg/images/tournament/755446/image-23876de2c31aaeb60409717236d85123.png</logo_url>
+    </torneo>
+
+    <torneo id="T-2026-07">
+        <nombre>Battle of BC</nombre>
+        <sede>Vancouver, Canadá</sede>
+        <fecha>2026-05-17</fecha>
+        <participantes>640</participantes>
+        <estado_manual>Finalizado</estado_manual>
+        <logo_url>https://images.start.gg/images/tournament/813487/image-84ed845ba507bf52e01294843b96807c.png</logo_url>
+    </torneo>
+
+    <torneo id="T-2026-08">
+        <nombre>CEO Gaming</nombre>
+        <sede>Florida, USA</sede>
+        <fecha>2026-06-21</fecha>
+        <participantes>450</participantes>
+        <estado_manual>Finalizado</estado_manual>
+        <logo_url>https://upload.wikimedia.org/wikipedia/en/8/8b/Community_Effort_Orlando_logo.png</logo_url>
+    </torneo>
+
+    <torneo id="T-2026-09">
+        <nombre>Delfino Maza</nombre>
+        <sede>Ciudad de México, México</sede>
+        <fecha>2026-09-05</fecha>
+        <participantes>300</participantes>
+        <estado_manual>Programado</estado_manual>
+        <logo_url>https://images.start.gg/images/tournament/673069/image-6a10464c7e79846eab71b96af1d347ae.png</logo_url>
+    </torneo>
+
+    <torneo id="T-2026-10">
+        <nombre>Ultimate Fighting Arena</nombre>
+        <sede>París, Francia</sede>
+        <fecha>2026-10-10</fecha>
+        <participantes>700</participantes>
+        <estado_manual>Programado</estado_manual>
+        <logo_url>https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg</logo_url>
+    </torneo>
+
+    <torneo id="T-2026-11">
+        <nombre>Collision</nombre>
+        <sede>Nueva Jersey, USA</sede>
+        <fecha>2026-03-14</fecha>
+        <participantes>900</participantes>
+        <estado_manual>Finalizado</estado_manual>
+        <logo_url>https://pbs.twimg.com/profile_images/1946325578849615873/nP6GXKxz_400x400.jpg</logo_url>
+    </torneo>
+
+    <torneo id="T-2026-12">
+        <nombre>Port Priority</nombre>
+        <sede>Seattle, USA</sede>
+        <fecha>2026-12-05</fecha>
+        <participantes>550</participantes>
+        <estado_manual>Programado</estado_manual>
+        <logo_url>https://images.start.gg/images/tournament/797422/image-bb52d235d99d0b0ba0ab6cbc592554e8.png</logo_url>
+    </torneo>
+
 </calendario>
