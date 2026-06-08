@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hall of Fame - SmashDex</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-logo">SMASHDEX</div>
+    <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../jugador/perfil.html">Perfil</a></li>
+        <li><a href="../jugador/historial.html">Historial</a></li>
+        <li><a href="../roster/roster.html">Roster</a></li>
+        <li><a href="../torneos/torneos.html">Torneos</a></li>
+        <li><a href="../torneos/estadisticas.html">Estadísticas</a></li>
+        <li><a href="hof.html" class="active">Hall of Fame</a></li>
+    </ul>
+</nav>
+
+<main class="contenedor">
+
+    <h1>🏆 Hall of Fame</h1>
+
+    <section class="hof-grid">
+
+        <div class="hof-card destaque">
+            <h2>🏅 Mejor Personaje</h2>
+            <img id="img-mejor-personaje" class="hof-avatar" src="" alt="">
+            <p id="mejor-personaje">Cargando...</p>
+        </div>
+
+        <div class="hof-card destaque">
+            <h2>🎮 Personaje Más Utilizado</h2>
+            <img id="img-mas-usado" class="hof-avatar" src="" alt="">
+            <p id="personaje-mas-usado">Cargando...</p>
+        </div>
+
+        <!-- Rival con imagen -->
+        <div class="hof-card">
+            <h2>⚔️ Rival Más Enfrentado</h2>
+            <img id="img-rival-frecuente" class="hof-avatar" src="" alt=""
+                 style="display:none;">
+            <p id="rival-frecuente">Cargando...</p>
+        </div>
+
+        <div class="hof-card">
+            <h2>🔥 Mayor Racha</h2>
+            <p id="mejor-racha">Cargando...</p>
+        </div>
+
+        <div class="hof-card">
+            <h2>👑 Win Rate Histórico</h2>
+            <p id="winrate-historico">Cargando...</p>
+        </div>
+
+        <div class="hof-card">
+            <h2>🏆 Torneo Más Grande</h2>
+            <p id="torneo-grande">Cargando...</p>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="../../js/vistas/halloffame.js"></script>
+
+</body>
+</html>
