@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", async () => {
 
-    // CORREGIDO: Rutas relativas directas desde la raíz para evitar errores 404 en GitHub Pages
-    const xmlJugadores = await cargarXML("/ordinario-ftw/datos/jugadores.xml");
-    const xmlCombates   = await cargarXML("/ordinario-ftw/datos/combates.xml");
-    const xmlPersonajes = await cargarXML("/ordinario-ftw/datos/personajes.xml");
+    const xmlJugadores = await cargarXML("../../datos/jugadores.xml");
+    const xmlCombates   = await cargarXML("../../datos/combates.xml");
+    const xmlPersonajes = await cargarXML("../../datos/personajes.xml");
 
     if (!xmlJugadores || !xmlCombates || !xmlPersonajes) {
         console.error("Error cargando XML");
